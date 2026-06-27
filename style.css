@@ -165,35 +165,50 @@ header {
 
 .hero-buttons {
   margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-primary,
-.btn-secondary {
-  display: inline-block;
-
+.btn-secondary,
+.resume-btn {
   padding: 14px 25px;
-
   border-radius: 8px;
-
   text-decoration: none;
-
-  margin-right: 15px;
-
   font-weight: 600;
+  text-align: center;
 }
 
 .btn-primary {
   background: var(--primary);
-
   color: white;
 }
 
 .btn-secondary {
   border: 2px solid var(--primary);
-
   color: var(--primary);
 }
 
+.resume-btn {
+  background: var(--primary);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .resume-btn {
+    width: 80%;
+  }
+}
 .social-links {
   margin-top: 30px;
   display: flex;
